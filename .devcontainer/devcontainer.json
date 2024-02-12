@@ -1,0 +1,27 @@
+{
+  "name": "Python 3.11 Dev Container",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.rulers": [
+          80,
+          120
+        ],
+        "python.pythonPath": "/usr/local/bin/python",
+        "python.languageServer": "Pylance",
+        "python.linting.enabled": true,
+        "python.formatting.provider": "black",
+        "python.formatting.blackPath": "/usr/local/bin/black",
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  "postCreateCommand": "bash post_install.sh"
+}
